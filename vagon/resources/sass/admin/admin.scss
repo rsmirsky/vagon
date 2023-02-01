@@ -1,0 +1,305 @@
+@import '~bootstrap-vue/dist/bootstrap-vue.css';
+
+.control-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  .buttons {
+      position: absolute;
+      top: 25px;
+      left: 20px;
+      display: flex;
+      flex-direction: row;
+      a:first-child {
+          margin-right: 13px;
+      }
+  }
+  &:first-child {
+    margin-right: 10px;
+  }
+}
+button {
+  background: none;
+  border: none;
+  color: #007bff;
+  transition: .3s;
+  &:hover {
+    color: #0056b3;
+    transition: .3s;
+  }
+}
+
+a {
+  transition: .3s;
+  &:hover {
+    text-decoration: none;
+    transition: .3s;
+  }
+}
+.preview-form-container{
+  overflow-x: scroll;
+}
+a.btn {
+  color: #fff;
+}
+.tabs .btn {
+  color: inherit;
+}
+
+.empty-label {
+  min-height: 22px;
+}
+.article_features_tab {
+  input {
+    width: 70%;
+  }
+}
+
+.accordion-container {
+    a.btn-info {
+        background-color: unset;
+        border: none;
+        color: #000;
+        text-align: left;
+        &:before {
+            position: absolute;
+            right: 27px;
+        }
+    }
+}
+
+.form-group {
+    input.form-control.error {
+        border-color: red;
+    }
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.category-active {
+    .form-check {
+        margin-top: 0;
+    }
+}
+
+.accordian-header, .accordian-body {
+    padding: 20px 20px;
+}
+
+.accordian-header {
+    font-size: 22px;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+[v-cloak] .v-cloak--block {
+    display: block;
+}
+[v-cloak] .v-cloak--inline {
+    display: inline;
+}
+[v-cloak] .v-cloak--inlineBlock {
+    display: inline-block;
+}
+[v-cloak] .v-cloak--hidden {
+    display: none;
+}
+[v-cloak] .v-cloak--invisible {
+    visibility: hidden;
+}
+.v-cloak--block,
+.v-cloak--inline,
+.v-cloak--inlineBlock {
+    display: none;
+}
+
+.accordian-header {
+    position: relative;
+    cursor: pointer;
+    margin-top: -1px;
+}
+
+.accordian .control-button i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #248afd;
+}
+
+.content-wrapper {
+    flex-direction: column;
+    display: flex;
+}
+
+.main-app-container, #app {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card {
+    display: flex;
+    flex-grow: 1;
+}
+
+.form-group.required {
+    label {
+        position: relative;
+        &:after {
+            content: "*";
+            color: red;
+            right: -10px;
+            position: absolute;
+            top: 0;
+        }
+    }
+}
+
+.card-control-header {
+    margin-bottom: 20px;
+}
+
+.card .pagination {
+    padding-left: 15px;
+}
+
+.add-attributes-group-btn {
+    margin-bottom: 20px;
+}
+
+.add-attribute-btn {
+    margin-top: 20px;
+}
+
+.product-image-upload-container {
+    .form-group {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .image-item {
+        background: #ffffff;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+        height: 167px;
+        line-height: 1;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        position: relative;
+        width: 167px;
+
+        img {
+            padding: 0 10px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+        }
+    }
+}
+
+.image-item-container {
+    position: relative;
+    display: inline-block;
+    .image-item-remove-btn {
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        font-size: 18px;
+        cursor: pointer;
+        i {
+            color: #656565;
+            transition: .3s;
+            &:hover {
+                color: #000;
+                transition: .3s;
+            }
+        }
+    }
+}
+
+.upload-image-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    i {
+        font-size: 100px;
+        color: #cccccc;
+    }
+}
+
+.product-category-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sidebar {
+    width: 260px;
+}
